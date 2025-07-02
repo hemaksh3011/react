@@ -1,0 +1,38 @@
+.body{
+    background-image: url('/public/Documentery_bg.jpg');
+    background-size: cover;
+    /* background-repeat:repeat; */
+}
+
+.navbar {
+    background-color: #222;
+    color: white;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+    margin: 0;
+    padding-right: 1rem;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+  }
+  
+  .nav-links li a:hover {
+    color: #ffa200;
+  }
+  
