@@ -6,6 +6,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
+    height: 10rem;
   }
   
   .mysite {
@@ -18,16 +19,19 @@
     display: flex;
     gap: 2.5rem;
     margin: 0;
-    padding-right: 1rem;
+    padding-left: 15rem;
   }
   
-  .nav-links li a {
+  .lists li a {
     text-decoration: none;
     color: white;
     font-weight: 500;
   }
   
-  .nav-links li a:hover {
+  .lists li a:hover {
     color: #ffa200;
   }
   
+  .nav1 input {
+    width: 20rem;
+  }
