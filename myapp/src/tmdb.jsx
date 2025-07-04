@@ -50,3 +50,15 @@ export async function searchTvShows(query) {
     return [];
   }
 }
+//upcoming
+export async function fetchUpcomingMovies() {
+    try {
+      const res = await fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}&language=en-US&region=IN`);
+      const data = await res.json();
+      return data.results;
+    } catch (error) {
+      console.error("Error fetching upcoming movies:", error);
+      return [];
+    }
+  }
+  

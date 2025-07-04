@@ -9,6 +9,7 @@ import About from './About';
 import TvShows from './TVShows';
 import './App.css';
 import bg from './images/Moody4_bg.jpg';
+import Upcoming from './Upcoming';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path='/Genre' element={<Genre />} />
             <Route path='/About' element={<About />} />
             <Route path='/tvshows' element={<TvShows />} />
+            <Route path='/Upcoming' element={<Upcoming />} />
           </Routes>
         </div>
         <Footer />
