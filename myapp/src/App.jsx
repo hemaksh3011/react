@@ -7,12 +7,17 @@ import Genre from './Genre';
 import About from './About';
 import Footer from './Footer';
 import './App.css'; // Import CSS
+import bg from './images/Moody4_bg.jpg'
+
+
+
 
 function App() {
   return (
     <div className="app-wrapper">
       <BrowserRouter>
         <Header />
+        <img src={bg} alt="" className='bg-image' />
         <div className="main-content">
           <Routes>
             <Route path='/Home' element={<Home />} />
