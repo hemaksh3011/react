@@ -1,0 +1,52 @@
+// tmdb.js
+
+const API_KEY = "09d4a583c206cebdd85ad57b36cb5a9d";
+const BASE_URL = "https://api.themoviedb.org/3";
+
+// Trending Movies
+export async function fetchTrendingMovies() {
+  try {
+    const res = await fetch(`${BASE_URL}/trending/movie/week?api_key=${API_KEY}`);
+    const data = await res.json();
+    return data.results;
+  } catch (error) {
+    console.error("Error fetching trending movies:", error);
+    return [];
+  }
+}
+
+// Trending TV Shows
+export async function fetchTrendingTvShows() {
+  try {
+    const res = await fetch(`${BASE_URL}/trending/tv/week?api_key=${API_KEY}`);
+    const data = await res.json();
+    return data.results;
+  } catch (error) {
+    console.error("Error fetching TV shows:", error);
+    return [];
+  }
+}
+
+// Search Movies
+export async function searchMovies(query) {
+  try {
+    const res = await fetch(`${BASE_URL}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(query)}`);
+    const data = await res.json();
+    return data.results;
+  } catch (error) {
+    console.error("Error searching movies:", error);
+    return [];
+  }
+}
+
+// Search TV Shows
+export async function searchTvShows(query) {
+  try {
+    const res = await fetch(`${BASE_URL}/search/tv?api_key=${API_KEY}&query=${encodeURIComponent(query)}`);
+    const data = await res.json();
+    return data.results;
+  } catch (error) {
+    console.error("Error searching TV shows:", error);
+    return [];
+  }
+}

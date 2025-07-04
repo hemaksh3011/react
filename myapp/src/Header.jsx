@@ -14,8 +14,8 @@ function Header() {
       </div>
 
       <nav className="nav-links">
-        <Link to="/" className="nav-item">Home</Link>
-        <Link to="/tvshows" className="nav-item">TV Shows</Link>
+        <Link to="/Home" className="nav-item">Home</Link>
+        <Link to="/TVShows" className="nav-item">TV Shows</Link>
         <Link to="/movies" className="nav-item">Movies</Link>
         <Link to="/upcoming" className="nav-item">Upcoming</Link>
         <Link to="/genres" className="nav-item">Genres</Link>
@@ -24,10 +24,7 @@ function Header() {
         <Link to="/contact" className="nav-item">Contact</Link>
       </nav>
 
-      <div className="search-bar">
-        <input type="text" placeholder="Search movies, actors..." />
-        <button className="search-btn">🔍</button>
-      </div>
+      
     </header>
   );
 }
