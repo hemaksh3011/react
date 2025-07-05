@@ -27,17 +27,17 @@ export async function fetchTrendingTvShows() {
   }
 }
 
-// Search Movies
-export async function searchMovies(query) {
-  try {
-    const res = await fetch(`${BASE_URL}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(query)}`);
-    const data = await res.json();
-    return data.results;
-  } catch (error) {
-    console.error("Error searching movies:", error);
-    return [];
-  }
-}
+// // Search Movies
+// export async function searchMovies(query) {
+//   try {
+//     const res = await fetch(`${BASE_URL}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(query)}`);
+//     const data = await res.json();
+//     return data.results;
+//   } catch (error) {
+//     console.error("Error searching movies:", error);
+//     return [];
+//   }
+// }
 
 // Search TV Shows
 export async function searchTvShows(query) {
