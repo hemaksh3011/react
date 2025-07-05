@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './TVShows.css';
 import { fetchTrendingTvShows, searchTvShows } from './tmdb';
-import MovieModal from './MovieModal';
+import { useNavigate } from 'react-router-dom';
 
 function TvShows() {
   const [tvShows, setTvShows] = useState([]);
-  const [selectedShow, setSelectedShow] = useState(null);
   const [query, setQuery] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     const load = async () => {
@@ -42,7 +42,7 @@ function TvShows() {
           <div
             key={tv.id}
             className="tv-card"
-            onClick={() => setSelectedShow(tv)}
+            onClick={() => navigate(`/tv/${tv.id}`)} // ✅ Navigate on click
           >
             <img
               src={`https://image.tmdb.org/t/p/w300${tv.poster_path}`}
@@ -53,10 +53,6 @@ function TvShows() {
           </div>
         ))}
       </div>
-
-      {selectedShow && (
-        <MovieModal movie={selectedShow} onClose={() => setSelectedShow(null)} />
-      )}
     </div>
   );
 }

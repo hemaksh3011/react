@@ -16,9 +16,8 @@ function Header() {
       <nav className="nav-links">
         <Link to="/Home" className="nav-item">Home</Link>
         <Link to="/TVShows" className="nav-item">TV Shows</Link>
-        <Link to="/movies" className="nav-item">Movies</Link>
         <Link to="/upcoming" className="nav-item">Upcoming</Link>
-        <Link to="/Genre" className="nav-item">Genres</Link>
+        <Link to="/Genre" className="nav-item">Movies</Link>
         {/* <Link to="/search" className="nav-item">Search</Link> */}
         <Link to="/about" className="nav-item">About</Link>
         <Link to="/contact" className="nav-item">Contact</Link>

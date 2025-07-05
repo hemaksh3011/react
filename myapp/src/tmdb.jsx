@@ -1,79 +1,65 @@
-// tmdb.js
+const API_KEY = '09d4a583c206cebdd85ad57b36cb5a9d';
+const BASE_URL = 'https://api.themoviedb.org/3';
 
-const API_KEY = "09d4a583c206cebdd85ad57b36cb5a9d";
-const BASE_URL = "https://api.themoviedb.org/3";
-
-// Trending Movies
+// 🔥 Trending Movies (Weekly)
 export async function fetchTrendingMovies() {
-  try {
-    const res = await fetch(`${BASE_URL}/trending/movie/week?api_key=${API_KEY}`);
-    const data = await res.json();
-    return data.results;
-  } catch (error) {
-    console.error("Error fetching trending movies:", error);
-    return [];
-  }
+  const res = await fetch(`${BASE_URL}/trending/movie/week?api_key=${API_KEY}`);
+  const data = await res.json();
+  return data.results;
 }
 
-// Trending TV Shows
+// 📺 Trending TV Shows (Weekly)
 export async function fetchTrendingTvShows() {
-  try {
-    const res = await fetch(`${BASE_URL}/trending/tv/week?api_key=${API_KEY}`);
-    const data = await res.json();
-    return data.results;
-  } catch (error) {
-    console.error("Error fetching TV shows:", error);
-    return [];
-  }
+  const res = await fetch(`${BASE_URL}/trending/tv/week?api_key=${API_KEY}`);
+  const data = await res.json();
+  return data.results;
 }
 
-// // Search Movies
-// export async function searchMovies(query) {
-//   try {
-//     const res = await fetch(`${BASE_URL}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(query)}`);
-//     const data = await res.json();
-//     return data.results;
-//   } catch (error) {
-//     console.error("Error searching movies:", error);
-//     return [];
-//   }
-// }
+// 🔍 Search Movies by Name
+export async function searchMovies(query) {
+  const res = await fetch(`${BASE_URL}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(query)}`);
+  const data = await res.json();
+  return data.results;
+}
 
-// Search TV Shows
+// 🔍 Search TV Shows by Name
 export async function searchTvShows(query) {
-  try {
-    const res = await fetch(`${BASE_URL}/search/tv?api_key=${API_KEY}&query=${encodeURIComponent(query)}`);
-    const data = await res.json();
-    return data.results;
-  } catch (error) {
-    console.error("Error searching TV shows:", error);
-    return [];
-  }
+  const res = await fetch(`${BASE_URL}/search/tv?api_key=${API_KEY}&query=${encodeURIComponent(query)}`);
+  const data = await res.json();
+  return data.results;
 }
-//upcoming
-export async function fetchUpcomingMovies() {
-    try {
-      const res = await fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}&language=en-US&region=IN`);
-      const data = await res.json();
-      return data.results;
-    } catch (error) {
-      console.error("Error fetching upcoming movies:", error);
-      return [];
-    }
-  }
-  
 
-  //genre 
-  export async function fetchMoviesByGenre(genreId) {
-    const res = await fetch(
-      `https://api.themoviedb.org/3/discover/movie?api_key=09d4a583c206cebdd85ad57b36cb5a9d&with_genres=${genreId}`
-    );
-    const data = await res.json();
-    return data.results;
-  }
-  export async function fetchMovieGenres() {
-    const res = await fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}`);
-    const data = await res.json();
-    return data.genres;
-  }
-  
+// 🎭 Get Movie Genres
+export async function fetchMovieGenres() {
+  const res = await fetch(`${BASE_URL}/genre/movie/list?api_key=${API_KEY}`);
+  const data = await res.json();
+  return data.genres;
+}
+
+// 🎭 Get Movies by Genre ID
+export async function fetchMoviesByGenre(genreId) {
+  const res = await fetch(`${BASE_URL}/discover/movie?api_key=${API_KEY}&with_genres=${genreId}`);
+  const data = await res.json();
+  return data.results;
+}
+
+// 🇮🇳 Bollywood Movies (Hindi Language)
+export async function fetchBollywoodMovies() {
+  const res = await fetch(`${BASE_URL}/discover/movie?api_key=${API_KEY}&with_original_language=hi&region=IN`);
+  const data = await res.json();
+  return data.results;
+}
+
+// 📅 Upcoming Movies
+export async function fetchUpcomingMovies() {
+  const res = await fetch(`${BASE_URL}/movie/upcoming?api_key=${API_KEY}`);
+  const data = await res.json();
+  return data.results;
+}
+
+// 📋 Full Movie Details by ID (includes cast & videos)
+export async function fetchMovieDetailById(id) {
+  const res = await fetch(`${BASE_URL}/movie/${id}?api_key=${API_KEY}&append_to_response=credits,videos`);
+  const data = await res.json();
+  return data;
+}

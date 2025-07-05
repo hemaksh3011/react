@@ -1,20 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import './Genre.css';
-import { fetchMovieGenres, fetchMoviesByGenre } from './tmdb';
-import MovieModal from './MovieModal';
+import { fetchMovieGenres, fetchMoviesByGenre, fetchBollywoodMovies } from './tmdb';
+import { useNavigate } from 'react-router-dom';
 
 function Genre() {
   const [genres, setGenres] = useState([]);
   const [moviesByGenre, setMoviesByGenre] = useState({});
   const [searchTerms, setSearchTerms] = useState({});
-  const [selectedMovie, setSelectedMovie] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const loadGenresAndMovies = async () => {
       const fetchedGenres = await fetchMovieGenres();
-      setGenres(fetchedGenres);
+      const filteredGenres = fetchedGenres.filter(g => g.name !== "Romance");
+      setGenres([{ id: 'bollywood', name: 'Bollywood' }, ...filteredGenres]);
       const genreData = {};
-      for (const genre of fetchedGenres) {
+
+      const bollywoodMovies = await fetchBollywoodMovies();
+      genreData['Bollywood'] = bollywoodMovies;
+
+      for (const genre of filteredGenres) {
         const movies = await fetchMoviesByGenre(genre.id);
         genreData[genre.name] = movies;
       }
@@ -60,7 +65,7 @@ function Genre() {
                 <div
                   key={movie.id}
                   className="genre-card"
-                  onClick={() => setSelectedMovie(movie)}
+                  onClick={() => navigate(`/movie/${movie.id}`)}
                 >
                   <img
                     src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
@@ -72,10 +77,6 @@ function Genre() {
           </div>
         </div>
       ))}
-
-      {selectedMovie && (
-        <MovieModal movie={selectedMovie} onClose={() => setSelectedMovie(null)} />
-      )}
     </div>
   );
 }
