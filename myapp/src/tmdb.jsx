@@ -62,3 +62,18 @@ export async function fetchUpcomingMovies() {
     }
   }
   
+
+  //genre 
+  export async function fetchMoviesByGenre(genreId) {
+    const res = await fetch(
+      `https://api.themoviedb.org/3/discover/movie?api_key=09d4a583c206cebdd85ad57b36cb5a9d&with_genres=${genreId}`
+    );
+    const data = await res.json();
+    return data.results;
+  }
+  export async function fetchMovieGenres() {
+    const res = await fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}`);
+    const data = await res.json();
+    return data.genres;
+  }
+  

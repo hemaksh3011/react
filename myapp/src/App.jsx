@@ -1,15 +1,16 @@
+// App.js
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import Home from './Home';
+import Upcoming from './Upcoming';
 import Contactus from './Contactus';
 import Genre from './Genre';
 import About from './About';
-import TvShows from './TVShows';
+import TVShows from './TVShows';
 import './App.css';
 import bg from './images/Moody4_bg.jpg';
-import Upcoming from './Upcoming';
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
             <Route path='/Contactus' element={<Contactus />} />
             <Route path='/Genre' element={<Genre />} />
             <Route path='/About' element={<About />} />
-            <Route path='/tvshows' element={<TvShows />} />
+            <Route path='/TVShows' element={<TVShows />} />
             <Route path='/Upcoming' element={<Upcoming />} />
           </Routes>
         </div>
