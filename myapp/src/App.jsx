@@ -9,6 +9,7 @@ import Contactus from './Contactus';
 import TVDetail from './TVDetail';
 import Genre from './Genre';
 import About from './About';
+import Theater from './Theater';
 import MovieDetail from './MovieDetail';  // ✅ fixed import name
 import TVShows from './TVShows';
 import './App.css';
@@ -30,6 +31,7 @@ function App() {
             <Route path='/About' element={<About />} />
             <Route path='/TVShows' element={<TVShows />} />
             <Route path='/Upcoming' element={<Upcoming />} />
+            <Route path='/Theater' element={<Theater />} />
           </Routes>
         </div>
         <Footer />

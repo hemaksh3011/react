@@ -19,6 +19,7 @@ function Header() {
         <Link to="/upcoming" className="nav-item">Upcoming</Link>
         <Link to="/Genre" className="nav-item">Movies</Link>
         {/* <Link to="/search" className="nav-item">Search</Link> */}
+        <Link to="/Theater" className="nav-item">Theaters</Link>
         <Link to="/about" className="nav-item">About</Link>
         <Link to="/Contactus" className="nav-item">Contact</Link>
       </nav>
