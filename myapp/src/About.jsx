@@ -1,26 +1,81 @@
-import React from 'react'
+import React from 'react';
 import './About.css';
 
 function About() {
   return (
-    <div>
-      <div className="about-container">
-        <h2>About Us</h2>
-        <p>
-          Welcome to our website! We are passionate about delivering high-quality content and services
-          to our users. Our mission is to create user-friendly, modern, and responsive experiences for
-          everyone.
+    <div className="major-container">
+    <div className="about-container">
+      <h1 className="about-title">
+        Welcome to <span className="highlight">CineScore</span>
+      </h1>
+
+      <p className="about-tagline">Your Ultimate Destination for Movies, Trailers, Cast & More</p>
+
+      <section>
+        <h2 className="section-title">🎬 What is CineScore?</h2>
+        <p className="about-paragraph">
+          <strong>CineScore</strong> is a dynamic movie discovery platform built with the goal of providing users a fast, modern, and visually appealing experience to explore the world of cinema. The platform offers users access to trending movies, upcoming releases, detailed cast info, trailers, and movie overviews — all in one place.
         </p>
-        <p>
-          Whether you're here to learn, explore, or connect, we hope to make your time with us valuable
-          and engaging. Thank you for visiting!
+        <p className="about-paragraph">
+          Powered by the <strong>TMDB (The Movie Database) API</strong>, CineScore fetches real-time data so users never miss out on what’s hot in the entertainment world. Whether you’re a hardcore movie buff or someone just looking for a good film to watch tonight, CineScore offers a seamless experience with an intuitive UI, stylish layout, and reliable information.
         </p>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem esse illo sed delectus quasi! Distinctio temporibus possimus eos necessitatibus neque dolor voluptate odio. Inventore iusto provident quae deserunt dolores nisi ipsam ipsum fugiat quas porro pariatur explicabo magni itaque dolorem et quod vel, accusamus natus tempora earum! Aspernatur sunt provident ullam eveniet laudantium voluptas quisquam, eius aut nulla maxime fuga assumenda eos suscipit earum quidem. Voluptas ullam hic vitae, magnam natus adipisci saepe voluptatibus, at molestiae dolores iusto, amet voluptatem? Totam, porro reiciendis assumenda ipsum omnis magnam culpa. Eius, commodi veniam magnam aliquam molestias nulla dolore soluta beatae ab, neque at dicta ipsa maiores. Ea reiciendis sint ducimus exercitationem corrupti doloribus, laudantium quas laboriosam nemo aut explicabo repudiandae et praesentium cumque temporibus ut facilis consectetur fuga eaque? Vel eum nemo, ad sit tempore architecto? Quo, nemo. Repudiandae, dolorem ex placeat possimus accusamus optio. Illo est, quos repellat neque omnis, quis sapiente um neque animi. Vel perspiciatis earum qui, reprehenderit soluta, explicabo recusandae consectetur enim, id eos iste harum a! Molestiae optio voluptate officia impedit? Assumenda odio, quod quibusdam debitis cupiditate atque, tenetur soluta, perspiciatis fugiat animi placeat dolorem. Odio officia voluptatem omnis, quisquam praesentium beatae, aspernatur necessitatibus pariatur velit ipsum vel veritatis quos quas reprehenderit odit quam voluptate nulla. Tempore fuga sequi placeat quos quasi fugit, dolorem ea maxime omnis unde molestiae magni doloremque officiis accusantium ab error incidunt rerum numquam. Harum accusamus itaque neque animi? Cupiditate accusantium magnam corrupti nam consectetur adipisci consequuntur pariatur eos magni, totam aspernatur aperiam harum, doloremque voluptatum aliquam voluptatem eveniet voluptate! Voluptas vel quo dicta repellendus eveniet odio, sed nulla officia ullam dolores autem mollitia ab in tenetur nam numquam! Eum voluptate commodi cumque iste sed pariatur corporis dolore illo odio esse placeat sit ipsam, fugit accusantium deserunt quasi ex dolorem illum officiis molestias velit eos sequi et magni? Harum voluptate officia amet quibusdam rem dignissimos, laboriosam iste nam ipsam nihil, deserunt modi voluptas error sequi accusantium praesentium iure obcaecati. In possimus nisi similique animi omnis! Quos assumenda voluptatum officia, sequi, labore obcaecati iste, similique porro ipsa et cumque voluptatem mollitia eos at blanditiis dolore magnam est esse id quidem animi asperiores. Earum reiciendis deserunt blanditiis repellendus voluptatibus praesentium itaque. Et tempora ad omnis. Consectetur eius labore hic, perferendis quo asperiores vel placeat, autem laudantium quod voluptatum distinctio dolores esse ut praesentium neque molestias repellendus? Aut maiores laudantium, dignissimos ipsum corrupti tempora molestias qui ipsam amet odit repudiandae et autem! Necessitatibus nobis, voluptas praesentium enim quia quae natus quaerat. Cupiditate reprehenderit, exercitationem aliquam quidem perspiciatis dolorem quo qui! Ipsam sunt corrupti optio a, expedita magnam ab id. Eaque provident assumenda commodi tempore, culpa eos ad aliquam. Similique maiores tempore eveniet enim, quaerat repellat numquam, saepe distinctio ratione culpa accusamus, quae adipisci velit molestiae labore. Explicabo magnam, vitae corporis laudantium iure nesciunt eius tempora harum quisquam, recusandae quasi ab autem officia inventore aliquam mollitia labore. Eveniet, repudiandae quibusdam sit rerum dolorum iusto. Voluptatum natus sit unde quaerat iste eum ratione nihil, pariatur consectetur itaque omnis eos dicta nisi officia vero ipsum, ipsam commodi placeat a? Ipsum explicabo, adipisci cum dignissimos dolores ab, fuga et, blanditiis consequuntur illum maiores cumque est pariatur voluptate dolorum voluptatum beatae consequatur officia reprehenderit necessitatibus ducimus! Tenetur aut voluptatibus ipsa porro impedit amet eveniet, rerum similique, saepe dicta itaque magnam architecto, fugiat cum doloremque aliquid. Consectetur adipisci quis id sint aliquam veniam eius amet quidem recusandae iste maiores, quia laboriosam officia laudantium tempora impedit corporis, sed unde nam nulla non consequatur at dolorem. Ut illo similique aperiam optio aliquam assumenda aspernatur eum labore, quis quos voluptatibus iste amet eligendi libero consectetur reprehenderit nulla deserunt neque. Iste, excepturi porro libero repellat dolorum temporibus odio exercitationem consequuntur maxime quis eum quaerat, at sit pariatur? Nisi deserunt recusandae nihil rerum magnam debitis eius in nesciunt natus! Veritatis laboriosam debitis modi quibusdam inventore distinctio deserunt possimus delectus dolore sunt dolorem quasi incidunt maxime atque doloremque, nam tempore libero et cupiditate nisi eligendi? Sit provident aut reprehenderit! Nihil animi recusandae aliquam nostrum fuga, deleniti, unde velit ut sint, sed commodi ducimus quaerat officia veniam voluptas id reiciendis. Quod quis odit debitis, temporibus facilis excepturi libero dignissimos accusamus accusantium veniam tenetur tempore nobis velit voluptatibus incidunt reprehenderit mollitia! Dolorem officia laudantium nobis fugit libero cupiditate, incidunt, saepe commodi sed repudiandae nulla architecto harum? Placeat perspiciatis eum aspernatur reiciendis quia fuga incidunt, aut sit laboriosam, enim necessitatibus iusto sed deleniti harum magni exercitationem laborum quasi! Obcaecati repudiandae, totam laboriosam neque quam, possimus laudantium, error perspiciatis consequuntur in rem alias nemo iste vero molestias architecto consequatur recusandae doloribus ex? Suscipit perspiciatis asperiores nihil possimus harum odit maxime facilis natus assumenda architecto quos, saepe officia sint vitae eum, doloremque recusandae quod ipsam consequuntur iure a. Neque eos dolorum consectetur quam, aliquam tempora sed error voluptatum eius nesciunt dicta, pariatur maiores possimus quae doloribus vitae labore dolor doloremque suscipit quas, dignissimos voluptas id impedit. Sint neque, dolorum esse id, ipsa dolore velit deserunt saepe, doloribus quo consequatur sapiente culpa? Laudantium illum sequi cum consequatur, enim veritatis soluta vitae autem molestiae labore cumque dolores, repudiandae aperiam corrupti beatae modi numquam optio sapiente et impedit! Molestias dignissimos aut doloremque. Nisi hic voluptates, quisquam earum enim molestiae illo culpa debitis similique doloremque quidem sunt quam itaque dolorum quaerat vitae cupiditate alias voluptatem minus eligendi omnis dolor officiis maxime tenetur? Incidunt rem accusantium impedit quam eaque eum facere obcaecati dolorem culpa enim asperiores, soluta debitis quo? Recusandae distinctio, nesciunt perspiciatis magni voluptates deserunt molestiae maxime unde officia facilis eveniet aspernatur laboriosam ducimus deleniti ea temporibus! Ipsam consequatur omnis maxime libero eum nisi quisquam recusandae excepturi. Earum non, quibusdam suscipit vitae ipsum asperiores praesentium amet. Illum debitis sint placeat modi error porro nisi!
+        <p className="about-paragraph">
+          Unlike other movie websites that often feel cluttered or outdated, CineScore focuses on delivering simplicity with power. Users can browse trending titles, search any movie instantly, check out trailers, view top cast, and read full overviews — all in a sleek, mobile-friendly design.
         </p>
-      </div>
+      </section>
+      <br />
+      <section>
+        <h2 className="section-title">✨ Core Features</h2>
+        <ul className="about-list">
+          <li>🔥 Real-time trending movies updated weekly</li>
+          <li>🗓 Discover upcoming movies with exact release dates</li>
+          <li>🎞 View trailers and video clips right on the detail page</li>
+          <li>👥 Explore top-billed cast and movie overviews</li>
+          <li>🔍 Quick and accurate search by title or genre</li>
+          <li>📺 Explore TV shows and movie genres</li>
+        </ul>
+      </section>
+      <br />
+      <section>
+        <h2 className="section-title">🛠️ Technology Stack</h2>
+        <ul className="about-list">
+          <li><strong>React.js</strong> – Component-based frontend for interactive UI</li>
+          <li><strong>React Router DOM</strong> – For clean client-side navigation</li>
+          <li><strong>TMDB API</strong> – Fetching real-time movie and TV data</li>
+          <li><strong>CSS</strong> – For custom styling and responsive layout</li>
+        </ul>
+      </section>
+<br />
+      <section>
+        <h2 className="section-title">👨‍💻 Meet the Developers</h2>
+
+        <div className="dev-team">
+          <div className="dev-card">
+            <h5>Himanshu Salvi</h5>
+            <p><strong>Email:</strong> himanshu@example.com</p>
+            <p><strong>Contact:</strong> +91-9876543210</p>
+          </div>
+
+          <div className="dev-card">
+            <h5>Hemaksh Kumawat</h5>
+            <p><strong>Email:</strong> <br /> hemaksh@example.com</p>
+            <p><strong>Contact:</strong> +91-9123456789</p>
+          </div>
+
+          <div className="dev-card">
+            <h5>Jaya Patidar</h5>
+            <p><strong>Email:</strong> <br /> jaya@example.com</p>
+            <p><strong>Contact:</strong> +91-9012345678</p>
+          </div>
+        </div>
+      </section>
+
+        <footer className="about-footer">
+        <p>© 2025 CineScore | Built with ❤️ By Team CineScore</p>
+      </footer>
     </div>
-  )
+    </div>
+  );
 }
 
-export default About
+export default About;

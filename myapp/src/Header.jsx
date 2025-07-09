@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
-import logo from './images/header_logo.png'; // make sure logo exists
+import logo from './images/cine_score.png'; // make sure logo exists
 
 function Header() {
   return (
@@ -20,7 +20,7 @@ function Header() {
         <Link to="/Genre" className="nav-item">Movies</Link>
         {/* <Link to="/search" className="nav-item">Search</Link> */}
         <Link to="/about" className="nav-item">About</Link>
-        <Link to="/contact" className="nav-item">Contact</Link>
+        <Link to="/Contactus" className="nav-item">Contact</Link>
       </nav>
 
       
