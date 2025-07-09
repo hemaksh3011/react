@@ -1,0 +1,14 @@
+why to use react, angular , node , vanilla or vue js and what is the actual difference.
+package-log.json and package.json ka difference.
+
+//prop drilling.....
+when props/ data going to inherit another components then prop drilling will be used here
+
+//life cycle methods in reactjs
+mounting⬇-----------updating⬇---------unmounting ⬇
+Dom added⬇-------state changes⬇-----removed from the dom ⬇
+render⬇--------------render⬇----------component will unmount ⬇
+component⬇         component⬇
+did mount----------did update--------
+
+que--how to code/write class based components
