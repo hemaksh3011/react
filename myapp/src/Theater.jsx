@@ -13,51 +13,51 @@ function TheaterSelector() {
   const theaters = selectedCity ? theaterData[selectedCountry][selectedState][selectedCity] : [];
 
   return (
-    <div className="location-selector">
-      <h3>Select Location</h3>
-      
-      <select onChange={(e) => {
-        setSelectedCountry(e.target.value);
-        setSelectedState("");
-        setSelectedCity("");
-      }}>
-        <option value="">Select Country</option>
-        {countries.map((country) => (
-          <option key={country}>{country}</option>
-        ))}
-      </select>
+    <div className="wrapper">
+      <div className="location-selector">
+        <h3>Select Location</h3>
 
-      {selectedCountry && (
-        <select onChange={(e) => {
-          setSelectedState(e.target.value);
+        <select value={selectedCountry} onChange={(e) => {
+          setSelectedCountry(e.target.value);
+          setSelectedState("");
           setSelectedCity("");
         }}>
+          <option value="">Select Country</option>
+          {countries.map((country) => (
+            <option key={country}>{country}</option>
+          ))}
+        </select>
+
+        <select value={selectedState} onChange={(e) => {
+          setSelectedState(e.target.value);
+          setSelectedCity("");
+        }} disabled={!selectedCountry}>
           <option value="">Select State</option>
           {states.map((state) => (
             <option key={state}>{state}</option>
           ))}
         </select>
-      )}
 
-      {selectedState && (
-        <select onChange={(e) => setSelectedCity(e.target.value)}>
+        <select value={selectedCity} onChange={(e) => setSelectedCity(e.target.value)} disabled={!selectedState}>
           <option value="">Select City</option>
           {cities.map((city) => (
             <option key={city}>{city}</option>
           ))}
         </select>
-      )}
 
-      {theaters.length > 0 && (
-        <div className="theater-list">
-          <h4>🎬 Theaters in {selectedCity}</h4>
-          <ul>
-            {theaters.map((theater, index) => (
-              <li key={index}>{theater}</li>
-            ))}
-          </ul>
-        </div>
-      )}
+        
+
+        {theaters.length > 0 && (
+          <div className="theater-list">
+            <h4>🎬 Theaters in {selectedCity}</h4>
+            <ul>
+              {theaters.map((theater, index) => (
+                <li key={index}>{theater}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
