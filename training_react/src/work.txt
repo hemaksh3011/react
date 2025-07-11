@@ -12,3 +12,7 @@ component⬇         component⬇
 did mount----------did update--------
 
 que--how to code/write class based components
+que--how many http requests are there
+
+//axios -> get ->   used to fetch data or url from servers with request
+        -> post ->  used to post the data or url 

@@ -1,4 +1,4 @@
-// import React from 'react'
+import React from 'react'
 import { useState } from 'react'
 
 const Counter = () => {
@@ -9,7 +9,7 @@ const Counter = () => {
     };
     const handleDecrease=()=>{
         if(count<=0){
-            console.log("cant decrese after 0");
+            alert("cant decrese");
         }else{
         setCount(count-1);
         }

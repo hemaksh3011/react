@@ -1,13 +1,24 @@
 import './App.css';
-import Card from './components/card'
+import Card from './components/Card'
 import Counter from './components/Counter';
-
+import MovieList from './components/MovieList';
+import Header from './components/Header';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <>
-    <div> <Counter/>    </div>
-      {/* <Card/> */}
+    <div>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Header/>} />
+      <Route path='/Counter' element={<Counter/>} />
+      <Route path='/Card' element={<Card/>} />
+      <Route path='/MovieList' element={<MovieList/>} />
+    </Routes>
+    </BrowserRouter>
+    </div>
+      
       </>
   );
 }

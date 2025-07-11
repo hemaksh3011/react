@@ -4,6 +4,7 @@ import '../card.css'
 
 const Card = () => {
   return (
+    // const MoviesCard=({poster_path,title,overview,release_date})
     <div className='container' >
         <div className="card">
             <div className="card-image">
