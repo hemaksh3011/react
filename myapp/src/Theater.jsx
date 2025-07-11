@@ -12,6 +12,11 @@ function TheaterSelector() {
   const cities = selectedState ? Object.keys(theaterData[selectedCountry][selectedState]) : [];
   const theaters = selectedCity ? theaterData[selectedCountry][selectedState][selectedCity] : [];
 
+  const bookmyshow = ()=>{
+    window.open('https://bookmyshow.com', '_blank');
+
+  }
+
   return (
     <div className="wrapper">
       <div className="location-selector">
@@ -52,7 +57,7 @@ function TheaterSelector() {
             <h4>🎬 Theaters in {selectedCity}</h4>
             <ul>
               {theaters.map((theater, index) => (
-                <li key={index}>{theater}</li>
+                <li key={index} className='bookmyshow' onClick={bookmyshow} >{theater}</li>
               ))}
             </ul>
           </div>
